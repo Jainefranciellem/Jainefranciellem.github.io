@@ -93,11 +93,12 @@ a:hover{
 #toggle {
     display: none;
 }
+/*MENU*/
 
 .menu {
     position: absolute;
-    right: 30px;
     top: 28px;
+    right: 30px;
     background-color: transparent;
     height: 4px;
     width: 10px;
@@ -122,12 +123,11 @@ a:hover{
     transition: 400ms ease-in-out 0s;
 }
 
-.menu-items ul {
-    list-style-type: none;
+html {
+    scroll-behavior: smooth;
 }
-
 .menu-items ul li a{
-    margin: 10px;
+    margin: 10px 0;
     color: #1E1E2A;
     text-decoration: none;
     text-transform: uppercase;
@@ -136,7 +136,7 @@ a:hover{
 }
 
 /*ANIMAÇÃO DO MENU*/
-
+/*traces*/
 #toggle:checked + .checkbox .trace:nth-child(1){
     transform: rotate(45deg);
     top: 47px;
@@ -147,11 +147,16 @@ a:hover{
     visibility: hidden;
     opacity: 0;
 }
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+}
+/*bolha branca*/
 #toggle:checked + .checkbox {
     background-color: #ffffff;
 }
 #toggle:checked ~ .menu {
-    box-shadow: 0px 0px 0px 100vmax #ffffff;
+    box-shadow: 0px 0px 0px 20vmax #ffffff;
     z-index: 1;
 }
 #toggle:checked ~ .menu-items{
